@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+.container-in{
+    padding: 0rem 4rem;
+    border: 2ps solid red;
+}
