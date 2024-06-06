@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Bar with Images</title>
+<style type="text/css">
+* {
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+}
+body {
+background: lightyellow;
+}
+.container-fluid {
+width: 100%;
+height: auto;
+padding: 0px 0px 80px 0px;
+}
+.container {
+width: 80%;
+margin: 0 auto;
+padding: 20px;
+}
+.search {
+margin-bottom: 20px;
+}
+.search h1 {
+margin-bottom: 10px;
+}
+.search input[type="text"] {
+width: 100%;
+padding: 10px;
+font-size: 16px;
+}
+ul {
+list-style-type: none;
+padding: 0;
+}
+ul li {
+display: flex;
+align-items: center;
+padding: 10px;
+background: white;
+margin-bottom: 5px;
+border: 1px solid #ddd;
+}
+ul li img {
+width: 50px;
+height: 50px;
+margin-right: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="container">
+<div class="search">
+<h1>All Products</h1>
+<input type="text" id="find" placeholder="Search here..." onkeyup="search()">
+</div>
+<ul id="product-list">
+<li><img src="https://tse1.mm.bing.net/th?id=OIP.o4A0-
+I6QToh_E9QLpDaPTgHaH_&pid=Api&P=0&h=180" alt="Apple">Apple</li>
+<li><img src="https://tse4.mm.bing.net/th?id=OIP.IXKCpF-
+CG8jGSmOdUoYKIQHaEK&pid=Api&P=0&h=180" alt="Banana">Banana</li>
+<li><img src="https://tse3.mm.bing.net/th?id=OIP.2uIsZG-
+Mbh8n7nQsJHS7JwHaJS&pid=Api&P=0&h=180" alt="Cherry">Cherry</li>
+<li><img
+src="https://tse1.mm.bing.net/th?id=OIP.xWpEOJHu5sv0K3BMCRBpHgHaF6&pid=Api&P=0&h=180"
+alt="Date">Date</li>
+<li><img src="https://tse4.mm.bing.net/th?id=OIP.n9SPwMTzv-_L-
+hdh5ApWnQHaHa&pid=Api&P=0&h=180" alt="Elderberry">Elderberry</li>
+<li><img
+src="https://tse1.mm.bing.net/th?id=OIP.0CYZI3rLzlO6z02vHOtxTgHaHF&pid=Api&P=0&h=180"
+alt="Fig">Fig</li>
+<li><img
+src="https://tse4.mm.bing.net/th?id=OIP.D6ixoz9FRKG2ahV35UVw3gHaEo&pid=Api&P=0&h=180"
+alt="Grape">Grape</li>
+</ul>
+</div>
+</div>
+<script>
+function search() {
+const input = document.getElementById('find');
+const filter = input.value.toLowerCase();
+const ul = document.getElementById('product-list');
+const li = ul.getElementsByTagName('li');
+for (let i = 0; i < li.length; i++) {
+const text = li[i].textContent || li[i].innerText;
+const imgAlt = li[i].getElementsByTagName('img')[0].alt;
+if (text.toLowerCase().indexOf(filter) > -1 || imgAlt.toLowerCase().indexOf(filter) > -1) {
+li[i].style.display = "";
+} else {
+li[i].style.display = "none";
+}
+}
+}
+</script>
+</body>
+</html>
