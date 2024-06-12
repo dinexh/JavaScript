@@ -27,6 +27,7 @@ nav{
     align-items: center;
     width: 100%;
 }
+.nav-
 .nav-in-one button{
     width: 100%;
     padding: 0.5rem;
@@ -40,8 +41,12 @@ nav{
     color: #333;
 }
 .nav-in-three button{
+    /* width: 80%; */
     padding: 0.5rem;
     border-radius: 10px;
     background-color: orange;
     font-size: 0.8rem;
+}
+.nav-in button:hover{
+    background-color: #ff4500;
 }
