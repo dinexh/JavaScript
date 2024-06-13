@@ -1,13 +1,17 @@
-function Sum() {
-    const priceElements = document.getElementsByClassName('Price');
+function sum() {
+    const quantities = document.getElementsByClassName('No');
+    const prices = document.getElementsByClassName('Price');
     let total = 0;
-    for (let i = 0; i < priceElements.length; i++) {
-        total += parseFloat(priceElements[i].textContent);
+
+    for (let i = 0; i < prices.length; i++) {
+        const quantity = parseInt(quantities[i].value);
+        const price = parseFloat(prices[i].textContent);
+
+        total += quantity * price;
     }
-    return total;
+
+    const totalDiv = document.getElementById('total');
+    totalDiv.textContent = 'Total: $' + total;
 }
 
-console.log(Sum());
-
-// Optionally, display the total in the 'total' div
-document.getElementById('total').textContent = `Total: $${Sum()}`;
+document.getElementById('submit').addEventListener('click', sum);
