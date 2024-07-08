@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Options</h1>
+        <div class="main">
+            <div id="rows-container">
+                <div class="row">
+                    <div class="box">
+                        <label for="Candles">Candles</label>
+                        <select name="Candles" id="Candles">
+                            <option value="1">1</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                            <option value="30">30</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <label for="name">Name</label>
+                        <select name="name" id="name">
+                            <option value="jay">jay</option>
+                            <option value="joe">joe</option>
+                            <option value="raj">raj</option>
+                            <option value="kul">kul</option>
+                            <option value="june">june</option>
+                            <option value="henry">henry</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <label for="options">Options</label>
+                        <select name="options" id="options">
+                            <option value="crossesabove">crosses above</option>
+                            <option value="crossesbelow">crosses below</option>
+                            <option value="above">above</option>
+                            <option value="below">below</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <label for="price">Price</label>
+                        <input type="text" id="price" name="price">
+                    </div>
+                    <button type="button" id="add-button">+</button>
+                </div>
+            </div>
+            <div class="submit">
+                <button type="button" id="submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
